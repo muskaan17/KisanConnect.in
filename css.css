@@ -1,0 +1,133 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2 Jul, 2024, 7:09:11 PM
+    Author     : Muskaan Srivastava
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url("phot.jpeg") center/cover no-repeat;
+  background-color: rgba(0, 0, 0, 0.6); 
+  padding: 0 10px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #fff;
+  margin: 15px 0;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #0b0a0a;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.input-field input,
+.input-field select {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #080808;
+  padding: 0 5px;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label,
+.input-field select:focus ~ label,
+.input-field select:valid ~ label {
+  font-size: 0.8rem;
+  top: -10px;
+}
+
+.input-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0;
+}
+
+button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.register {
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.wrapper a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+a:visited{
+    color: rgb(44, 44, 188);
+}
+

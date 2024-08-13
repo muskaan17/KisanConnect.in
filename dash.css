@@ -1,0 +1,342 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url("phot.jpeg") center/cover no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 70px; /* Added padding to avoid content being hidden behind the fixed header */
+}
+
+/* Header */
+header {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    position: fixed;
+    top: 0; /* Fixes the header at the top */
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #40b736;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: #40b736;
+    border-radius: 4px;
+    color: white;
+}
+
+/* About Section */
+.about {
+    background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(173, 252, 163) 100%);
+    padding: 100px 0 20px 0;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1rem;
+    color: #323030;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-info {
+    margin: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.about-img {
+    width: 20rem;
+    height: 20rem;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.about-info p {
+    font-size: 1.3rem;
+    margin: 0 2rem;
+    text-align: justify;
+}
+
+/* Team Section */
+.team {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.team h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 18rem;
+    height: 25rem;
+    margin-top: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+    width: 18rem;
+    height: 12rem;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.card-info button {
+    margin: 2rem 1rem;
+}
+
+.card-name {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.card-role {
+    font-size: 1rem;
+    color: #888;
+    margin: 5px 0;
+}
+
+.card-email {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 20px;
+}
+
+.wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.wrapper .input-field {
+    position: relative;
+    border-bottom: 2px solid #fff;
+    margin: 15px 0;
+}
+
+.wrapper .input-field label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #0b0a0a;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+.wrapper .input-field input,
+.wrapper .input-field select {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #080808;
+    padding: 0 5px;
+}
+
+.wrapper .input-field input:focus ~ label,
+.wrapper .input-field input:valid ~ label,
+.wrapper .input-field select:focus ~ label,
+.wrapper .input-field select:valid ~ label {
+    font-size: 0.8rem;
+    top: -10px;
+}
+
+.wrapper .input-field select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0;
+}
+
+.wrapper button {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.wrapper button:hover {
+    background: #000;
+    color: #fff;
+}
+
+.register {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.wrapper a {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+.wrapper a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: rgb(44, 44, 188);
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        display: block;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        justify-content: space-between;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+    }
+
+    .about h1 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+
+    .about-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        width: 60%;
+        height: 60%;
+        margin-bottom: 1rem;
+    }
+
+    .about-info p {
+        margin: 1rem 2rem;
+    }
+
+    .about-info button {
+        margin: 1rem 2rem;
+        width: 10rem;
+    }
+
+    .team {
+        margin: 0 1rem;
+    }
+}
